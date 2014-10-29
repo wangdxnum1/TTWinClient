@@ -44,6 +44,7 @@ CImPdu* DoLoginServer::doLogin()
 
 	//µÇÂ¼·þÎñÆ÷µØÖ·
 	module::TTConfig* pCfg = module::getSysConfigModule()->getSystemConfig();
+	APP_LOG(LOG_ERROR, 1, _T("DoLoginServer::doLogin,address:%s:%d"), pCfg->loginServIP, pCfg->loginServPort);
 	BOOL bRet = m_pLinkSocket->connect(pCfg->loginServIP, pCfg->loginServPort);
 	PTR_NULL(bRet);
 

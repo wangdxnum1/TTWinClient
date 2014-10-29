@@ -86,10 +86,11 @@ DuiLib::CDuiString ServerConfigDialog::GetSkinFolder()
 
 void ServerConfigDialog::_InitlizeSetting()
 {
-	APP_LOG(LOG_ERROR, _T("_InitlizeSetting,∂¡»°…Ë÷√ ß∞‹"));
+	APP_LOG(LOG_ERROR, _T("ServerConfigDialog::_InitlizeSetting,∂¡»°…Ë÷√"));
 	module::TTConfig* pTTConfig = module::getSysConfigModule()->getSystemConfig();
 	if (!pTTConfig)
 	{
+		APP_LOG(LOG_ERROR, _T("ServerConfigDialog::_InitlizeSetting,∂¡»°…Ë÷√ ß∞‹"));
 		return;
 	}
 
