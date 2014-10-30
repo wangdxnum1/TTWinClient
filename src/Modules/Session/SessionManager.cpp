@@ -242,6 +242,7 @@ SessionDialog* SessionDialogManager::openSessionDialog(const std::string& sId)
 		pChatDialog->Create(NULL, pSessionInfo->getName(), UI_WNDSTYLE_FRAME | WS_POPUP, NULL, 0, 0, 0, 0);
 		pChatDialog->CenterWindow();
 		m_lstSessionDialog.push_back(pChatDialog);
+		APP_LOG(LOG_ERROR,_T("SessionDialogManager::openSessionDialog-Creat Dialog:%s"),pSessionInfo->getName());
 	}
 	else
 	{

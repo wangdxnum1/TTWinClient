@@ -327,7 +327,10 @@ BOOL SessionDialog::StartPlayingAnimate(std::string sAudioPlayingID)
 
 LRESULT SessionDialog::OnSetFocus(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
-	m_pSessionLayout->m_pInputRichEdit->SetFocus();//bug，切换的时候，第一次不能获得焦点
+	if (m_pSessionLayout && m_pSessionLayout->m_pInputRichEdit)
+	{
+		m_pSessionLayout->m_pInputRichEdit->SetFocus();//bug，切换的时候，第一次不能获得焦点
+	}
 	return __super::OnSetFocus(uMsg, wParam, lParam, bHandled);
 }
 

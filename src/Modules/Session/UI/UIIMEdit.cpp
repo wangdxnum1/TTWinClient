@@ -522,6 +522,7 @@ BOOL UIIMEdit::GetContent(OUT MixedMsg& mixMsg)
 
 void UIIMEdit::DoInit()
 {
+	APP_LOG(LOG_DEBUG, _T("UIIMEdit::DoInit"));
 	__super::DoInit();
 	GetRichEditOle();
 }

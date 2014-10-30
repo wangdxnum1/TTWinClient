@@ -258,6 +258,7 @@ void SessionLayout::DoEvent(TEventUI& event)
 
 void SessionLayout::DocmentComplete(IDispatch *pDisp, VARIANT *&url)
 {
+	APP_LOG(LOG_ERROR, _T("SessionLayout::DocmentComplete"));
 	logic::GetLogic()->asynFireUIEventWithLambda(
 		[=]()
 	{
@@ -280,6 +281,7 @@ HRESULT STDMETHODCALLTYPE SessionLayout::TranslateUrl( /* [in] */ DWORD dwTransl
 	}
 	//历史消息内容
 	CString csUrl = pchURLIn;
+	APP_LOG(LOG_ERROR, _T("SessionLayout::TranslateUrl:%s"), csUrl);
 	if (csUrl.Find(_T("moguim/:history")) > -1)//显示历史消息
 	{
 		_DisplayHistoryMsgToIE(20,FALSE);

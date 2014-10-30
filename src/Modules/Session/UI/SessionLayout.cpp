@@ -132,6 +132,7 @@ STDAPI_(void) OleUIMetafilePictIconFree(HGLOBAL hMetaPict)
 
 void SessionLayout::OnWindowInitialized(TNotifyUI& msg)
 {
+	APP_LOG(LOG_DEBUG, _T("SessionLayout::OnWindowInitialized"));
 	m_pWebBrowser = dynamic_cast<CWebBrowserUI*>(m_pManager->FindSubControlByName(this, _T("ie")));
 	if (m_pWebBrowser) {
 		m_pWebBrowser->SetWebBrowserEventHandler(this);
