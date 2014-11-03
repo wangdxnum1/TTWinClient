@@ -70,7 +70,10 @@ copy %TEAMTALK_SRC%\release\TTLogic.pdb 				%TEAMTALK_PDB%\
 copy %TEAMTALK_SRC%\release\utility.pdb 				%TEAMTALK_PDB%\
 
 @echo 拷贝说明文档
-copy %TEAMTALK_INSTALL%\Teamtalk新特性.txt       	    %TEAMTALK_BIN%\
+copy %TEAMTALK_INSTALL%\Teamtalk新特性.txt       			%TEAMTALK_BIN%\
+copy "%TEAMTALK_INSTALL%\res\duilib license.txt"       			%TEAMTALK_BIN%\
+copy "%TEAMTALK_INSTALL%\res\directui license.txt"       		%TEAMTALK_BIN%\
+
 
 @rem 设置打包版本号
 Setlocal ENABLEDELAYEDEXPANSION
